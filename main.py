@@ -1,9 +1,3 @@
-from kivy.config import Config
-# Désactiver le splash screen
-Config.set('kivy', 'desktop', 1)
-Config.set('kivy', 'exit_on_escape', 1)
-
-
 from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivymd.uix.screenmanager import MDScreenManager
@@ -45,6 +39,7 @@ class Icon(MDIconButton,HoverBehavior):
     def __init__(self, text="", **kwargs):
         super().__init__(**kwargs)
         self.text = text
+        self.theme_cls.material_style = "M3"
         # Menu qui s'affiche au survol
         self.tooltip_menu = MDDropdownMenu(
             width=dp(50),
