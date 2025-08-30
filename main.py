@@ -1,3 +1,9 @@
+from kivy.config import Config
+# Désactiver le splash screen
+Config.set('kivy', 'desktop', 1)
+Config.set('kivy', 'exit_on_escape', 1)
+
+
 from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivymd.uix.screenmanager import MDScreenManager
